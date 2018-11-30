@@ -19,6 +19,6 @@ RUN wine wineboot && xvfb-run winetricks --unattended dotnet40 corefonts
 # Install WiX
 RUN mkdir /home/wix/wix
 WORKDIR /home/wix/wix
-ADD wix38-binaries.zip /home/wix/wix/wix38-binaries.zip
-RUN unzip /home/wix/wix/wix38-binaries.zip
-RUN rm /home/wix/wix/wix38-binaries.zip
+ADD https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311-binaries.zip /home/wix/wix/wix-binaries.zip
+RUN unzip /home/wix/wix/wix-binaries.zip
+RUN rm /home/wix/wix/wix-binaries.zip
